@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Order = require('../models/order')
 var OrderItem = require('../models/orderItem')
+var { isAuthnticated } = require('../auth')
 
 /* GET orders */
 router.get('/', async function (req, res) {
